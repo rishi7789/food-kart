@@ -1,0 +1,274 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ddd;
+}
+
+
+.app {
+  /* position: absolute; */
+  /* top: 0px; */
+  min-height: 170vh;
+  min-width: 210vh;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(168, 241, 21);
+}
+
+.navbar .search-bar input {
+  padding: 0.5rem;
+  width: 300px;
+  font-size: 1rem;
+  border-radius: 25px;
+}
+
+.navbar .cart {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+.navbar .cart span {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.categories button {
+  margin: 0 0.5rem;
+  padding: 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.categories button:hover {
+  background-color: #28a745;
+  color: white;
+}
+
+.food-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.food-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 30px;
+  padding: 20px;
+  width: 300px;
+}
+
+.food-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.food-item .details {
+  text-align: left;
+}
+
+.food-item .details h3 {
+  margin: 0.5rem 0;
+}
+
+.food-item .details p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.food-item .details button {
+  padding: 0.5rem 1rem;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-page {
+  width: 400px;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.cart-page h2 {
+  background-color: #333;
+  color: white;
+  margin-top: 0;
+  text-align: center;
+  /* padding-left: 140px; */
+}
+
+.cart-item {
+  display: flex;
+  margin: 1rem 0;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+  /* box-shadow: 5px 5px; */
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.cart-item .details {
+  display: flex;
+  position: absolute;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.cart-item .details h3 {
+  position: absolute;
+  margin: 10px 40px;
+  font-size: 1rem;
+}
+
+.cart-item .details p {
+  margin: 10px 200px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.cart-item .details .quantity {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  margin: 5px 300px;
+}
+
+.cart-item .details .quantity button {
+  padding: 5px;
+  margin: 3px;
+  font-weight: bold;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.total {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.checkout {
+
+  margin: 10px 100px;
+  padding: 0.75rem 1.5rem;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+}
+
+.success-page {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 5px;
+  z-index: 100;
+}
+
+
+@media (max-width: 768px) {
+
+  .app {
+    background-color: #ddd;
+  }
+
+  .navbar {
+    flex-direction: column;
+    max-width: 50vh;
+  }
+
+  .categories {
+    flex-direction: column;
+    width: 35vh;
+    margin-left: 25px;
+
+  }
+
+  .categories button {
+    border: 1px solid black;
+  }
+
+  .food-items {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .navbar .cart span {
+    position: absolute;
+    top: 90px;
+    right: 180px;
+  }
+
+  .cart-page {
+    margin-left: 20px;
+  }
+
+
+  footer .footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+    /* margin-right: 800px; */
+    width: 55vh;
+    text-align: center;
+    font-size: 1rem;
+  }
+}
